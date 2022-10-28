@@ -3,7 +3,7 @@ const {query} = require("../db/index.js")
 const express = require("express");
 const router = express.Router();
 
-const {getAllMembers} = require("../models/members.js")
+const {getAllMembers, getMembersById} = require("../models/members.js")
 
 router.get('/', async function (req,res){
     if(req.query.first_name){
@@ -18,8 +18,9 @@ router.get('/', async function (req,res){
 })
 
 router.get('/:id', async function (req, res) {
-    console.log(req.params.id)
-    res.send(req.params.id)
+    
+    const result = await getMembersById(req.params.id)
+    res.send(result)
 })
 
 //ADD NEW MEMBER
