@@ -28,4 +28,9 @@ router.post('/', async function (req,res){
     res.send(req.body)
 })
 
+router.patch('/:id', async function(req, res) {
+    console.log(req.params.id)
+    // res.send(req.params.id)
+    res.send(req.body)
+})
 module.exports = router;
