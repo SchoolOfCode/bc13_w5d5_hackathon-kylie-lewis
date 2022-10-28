@@ -7,8 +7,9 @@
 // Import the models
 
 const express = require('express');
-const router = express.Router();
 
+const router = express.Router();
+const {getAll} = require('../models/films.js')
 //GET ALL FILMS
 //GET FILMS BY TITLE
 router.get('/', async (req, res) => {
@@ -17,8 +18,9 @@ router.get('/', async (req, res) => {
         res.send(req.query.title);
     }
     else{
+        const allFilms = await getAll()
         console.log("hello Kylie, jeremy and lewis");
-        res.send("hello");
+        res.send({success: true, payload: allFilms});
     }
    
 })
