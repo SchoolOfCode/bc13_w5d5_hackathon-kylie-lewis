@@ -33,4 +33,9 @@ router.patch('/:id', async function(req, res) {
     // res.send(req.params.id)
     res.send(req.body)
 })
+
+router.delete('/:id', async function(req, res) {
+    console.log(req.params.id)
+    res.send(req.params.id)
+})
 module.exports = router;
