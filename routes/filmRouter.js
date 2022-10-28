@@ -34,10 +34,16 @@ router.post('/', async (req, res) => {
     //console.log(req.body)
     res.send(req.body)
 })
-
+//EDIT FILM BY ID
 router.patch('/:id', async (req, res) => {
     console.log("hello")
     res.send(req.body)
+})
+
+//DELETE FILM BY ID
+router.delete('/:id', async (req, res) => {
+    console.log(req.params.id)
+    res.send(req.params.id)
 })
 
 module.exports = router;
