@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
 //GET FILMS BY ID
 router.get('/:id', async (req, res) => {
     const getById = await getFilmsById(req.params.id)
-    console.log("id")
+    console.log(getById)
     res.send({success: true, payload: getById})
 })
 
