@@ -29,7 +29,11 @@ router.get('/:id', async (req, res) => {
     res.send(req.params.id)
 })
 
-
+//Create new film
+router.post('/', async (req, res) => {
+    console.log(req.body)
+    res.send(req.body)
+})
 
 module.exports = router;
 
