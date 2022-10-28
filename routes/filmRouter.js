@@ -31,7 +31,12 @@ router.get('/:id', async (req, res) => {
 
 //Create new film
 router.post('/', async (req, res) => {
-    console.log(req.body)
+    //console.log(req.body)
+    res.send(req.body)
+})
+
+router.patch('/:id', async (req, res) => {
+    console.log("hello")
     res.send(req.body)
 })
 
