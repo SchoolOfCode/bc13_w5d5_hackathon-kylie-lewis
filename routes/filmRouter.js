@@ -12,7 +12,9 @@ const express = require('express');
 const router = express.Router();
 const {getAll,
     getFilmsById,
-getFilmsByTitle} = require('../models/films.js')
+getFilmsByTitle,
+createFilms
+} = require('../models/films.js')
 //GET ALL FILMS
 //GET FILMS BY TITLE
 router.get('/', async (req, res) => {
@@ -38,7 +40,9 @@ router.get('/:id', async (req, res) => {
 //Create new film
 router.post('/', async (req, res) => {
     //console.log(req.body)
-    res.send(req.body)
+    const getFilms = await createFilms(req.body)
+    console.log(getFilms)
+    res.send(getFilms)
 })
 //EDIT FILM BY ID
 router.patch('/:id', async (req, res) => {

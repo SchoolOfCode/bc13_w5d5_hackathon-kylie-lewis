@@ -17,8 +17,17 @@ async function getFilmsByTitle(searchTerm) {
     return result.rows
 }
 
+async function createFilms(newFilm) {
+    const result = await query(
+    `INSERT INTO films (title)
+     VALUES ('${newFilm.title}')
+     RETURNING *
+    `)
+    return result.rows[0]
+}
 module.exports = {
     getAll,
     getFilmsById,
-    getFilmsByTitle
+    getFilmsByTitle,
+    createFilms
 }
