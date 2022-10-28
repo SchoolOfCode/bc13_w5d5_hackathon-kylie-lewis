@@ -22,6 +22,10 @@ router.get('/:id', async function (req, res) {
     res.send(req.params.id)
 })
 
-
+//ADD NEW MEMBER
+router.post('/', async function (req,res){
+    console.log(req.body)
+    res.send(req.body)
+})
 
 module.exports = router;
