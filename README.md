@@ -30,3 +30,7 @@ The following packages have already been added to your package.json file as depe
 - If you need a review on using fetch from your front end, check out this short [video here](https://drive.google.com/file/d/1HWDkpK11y9wgzPURBx5-QSkQHb4Y-XsO/view?usp=sharing).
 - If you want to look more closely at using the second argument of fetch (where you specify the HTTP method, headers, body, etc.), watch this even shorter [video here](https://drive.google.com/file/d/1tdgoLo-7GxS9vJtPkYfDlShAuftzZctL/view?usp=sharing).
 - When sending a request with a body, you'll need a `Content-Type` header to tell the Express server that you're sending JSON. This way, the `express.json()` middleware can work correctly. Read more about this header in this [article here](https://www.freecodecamp.org/news/what-is-the-correct-content-type-for-json-request-header-mime-type-explained/), including how to set the correct `Content-Type` header for sending JSON.
+
+
+PLAN  
+![](/images/Screenshot%202022-10-28%20at%2009.39.55.png)

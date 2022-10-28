@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World App</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <script src="/index.js"></script>
+    <div class="container">
+      <div class="title container-item">BLOCKBUSTER</div>
+
+      <div class="member-form container-item">
+        <label for="id-box" >Member ID</label>
+        <input name="id-box" id="id-box" type="text">
+
+        <label for="firstname-box" >First Name</label>
+        <input name="firstname-box" id="firstname-box" type="text">
+
+        <label for="lastname-box" >Last Name</label>
+        <input name="lastname-box" id="lastname-box" type="text">
+      </div>
+      
+      <div class="film-form container-item">
+        <label for="id-film-box" >Film ID</label>
+        <input name="id-film-box" id="id-film-box" type="text">
+
+        <label for="member-id-box" >Member ID</label>
+        <input name="member-id-box" id="member-id-box" type="text">
+
+        <label for="title-box" >Film Title</label>
+        <input name="title-box" id="title-box" type="text">
+      </div>
+
+      <div class="buttons container-item">
+        <button class="create-button">CREATE</button>
+        <button class="read-button">READ</button>
+        <button class="update-button">UPDATE</button>
+        <button class="delete-button">DELETE</button>
+      </div>
+
+      <div class="returns container-item">
+        <label for="return-textarea"></label>
+        <textarea id="return-textarea" name="return-textarea" rows="6" cols="70">
+        </textarea>
+      </div>
+    </div>
+
+  <script src="index.js"></script>
   </body>
 </html>
