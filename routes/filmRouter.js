@@ -10,9 +10,17 @@ const express = require('express');
 const router = express.Router();
 
 //GET ALL FILMS
+//GET FILMS BY TITLE
 router.get('/', async (req, res) => {
-    console.log("hello Kylie, jeremy and lewis");
-    res.send("hello");
+    if (req.query.title){
+        console.log(req.query.title);
+        res.send(req.query.title);
+    }
+    else{
+        console.log("hello Kylie, jeremy and lewis");
+        res.send("hello");
+    }
+   
 })
 
 //GET FILMS BY ID
@@ -21,10 +29,7 @@ router.get('/:id', async (req, res) => {
     res.send(req.params.id)
 })
 
+
+
 module.exports = router;
 
-// router.get("/", async function (req, res) {
-//     if (req.query.name !== undefined) {
-//       const searchedAuthors = await searchAuthorByName(req.query.name);
-//       return res.json({ success: true, payload: searchedAuthors });
-//     }
