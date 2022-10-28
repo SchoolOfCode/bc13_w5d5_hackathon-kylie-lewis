@@ -10,12 +10,15 @@ const { query } = require('express');
 const express = require('express');
 
 const router = express.Router();
-const {getAll,
+const {
+    getAll,
     getFilmsById,
-getFilmsByTitle,
-createFilms,
-deleteFilm
+    getFilmsByTitle,
+    createFilms,
+    deleteFilm
 } = require('../models/films.js')
+
+
 //GET ALL FILMS
 //GET FILMS BY TITLE
 router.get('/', async (req, res) => {

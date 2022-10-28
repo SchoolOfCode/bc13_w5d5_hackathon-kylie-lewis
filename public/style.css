@@ -20,6 +20,7 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 5%;
+  gap: 20px;
 }
 
 .title {
@@ -32,6 +33,7 @@ body {
  border: 3px solid steelblue;
  text-align: center;
  border-radius: 3%;
+ 
 }
 
 .member-form {
@@ -39,7 +41,7 @@ body {
  height: 20%;
  width: 75%;
  padding: 15px;
- font-size: 1.3rem;
+ font-size: 1rem;
  flex-direction: column;
  justify-content: flex-start;
  align-items: center;
@@ -57,7 +59,7 @@ input {
   height: 20%;
   width: 75%;
   padding: 15px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -81,7 +83,19 @@ input {
   line-height: 40px;
 }
 
+.returns {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.return-textarea {
+  overflow-y: scroll;
+  
+  width: 80px;
+  max-height: 90%;
+  
+}
 
