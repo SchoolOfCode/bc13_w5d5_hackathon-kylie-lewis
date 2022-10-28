@@ -9,9 +9,16 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('', (req, res) => {
+//GET ALL FILMS
+router.get('/', async (req, res) => {
     console.log("hello Kylie, jeremy and lewis");
     res.send("hello");
+})
+
+//GET FILMS BY ID
+router.get('/:id', async (req, res) => {
+    console.log("id")
+    res.send(req.params.id)
 })
 
 module.exports = router;
