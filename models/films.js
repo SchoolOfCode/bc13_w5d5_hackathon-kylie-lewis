@@ -11,9 +11,14 @@ async function getFilmsById(id) {
     return result.rows;
 }
 
-
+async function getFilmsByTitle(searchTerm) {
+    const result = await query(`SELECT * FROM films WHERE title = '${searchTerm}'`)
+    console.log(result)
+    return result.rows
+}
 
 module.exports = {
     getAll,
-    getFilmsById
+    getFilmsById,
+    getFilmsByTitle
 }

@@ -6,17 +6,19 @@
  
 // Import the models
 
+const { query } = require('express');
 const express = require('express');
 
 const router = express.Router();
 const {getAll,
-    getFilmsById} = require('../models/films.js')
+    getFilmsById,
+getFilmsByTitle} = require('../models/films.js')
 //GET ALL FILMS
 //GET FILMS BY TITLE
 router.get('/', async (req, res) => {
     if (req.query.title){
-        console.log(req.query.title);
-        res.send(req.query.title);
+        const filmTitle = await getFilmsByTitle(req.query.title)
+        res.send(filmTitle);
     }
     else{
         const allFilms = await getAll()
