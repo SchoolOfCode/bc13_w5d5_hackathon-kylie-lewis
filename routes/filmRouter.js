@@ -13,7 +13,8 @@ const router = express.Router();
 const {getAll,
     getFilmsById,
 getFilmsByTitle,
-createFilms
+createFilms,
+deleteFilm
 } = require('../models/films.js')
 //GET ALL FILMS
 //GET FILMS BY TITLE
@@ -52,8 +53,9 @@ router.patch('/:id', async (req, res) => {
 
 //DELETE FILM BY ID
 router.delete('/:id', async (req, res) => {
+    const deletedFilm = await deleteFilm(req.params.id)
     console.log(req.params.id)
-    res.send(req.params.id)
+    res.send({success: true, payload: deletedFilm})
 })
 
 module.exports = router;

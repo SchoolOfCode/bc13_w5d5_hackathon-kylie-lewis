@@ -25,9 +25,18 @@ async function createFilms(newFilm) {
     `)
     return result.rows[0]
 }
+
+async function deleteFilm(id) {
+    const result = await query(`DELETE FROM films
+    WHERE id = ${id}
+    RETURNING *`)
+    return result.rows
+}
+
 module.exports = {
     getAll,
     getFilmsById,
     getFilmsByTitle,
-    createFilms
+    createFilms,
+    deleteFilm
 }
