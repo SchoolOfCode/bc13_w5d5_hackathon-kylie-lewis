@@ -6,8 +6,14 @@ async function getAll() {
     return result.rows
 }
 
+async function getFilmsById(id) {
+    const result = await query(`SELECT * FROM films WHERE id = ${id}`)
+    return result.rows;
+}
+
 
 
 module.exports = {
-    getAll
+    getAll,
+    getFilmsById
 }

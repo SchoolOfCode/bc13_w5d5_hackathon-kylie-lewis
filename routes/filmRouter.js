@@ -9,7 +9,8 @@
 const express = require('express');
 
 const router = express.Router();
-const {getAll} = require('../models/films.js')
+const {getAll,
+    getFilmsById} = require('../models/films.js')
 //GET ALL FILMS
 //GET FILMS BY TITLE
 router.get('/', async (req, res) => {
@@ -27,8 +28,9 @@ router.get('/', async (req, res) => {
 
 //GET FILMS BY ID
 router.get('/:id', async (req, res) => {
+    const getById = await getFilmsById(req.params.id)
     console.log("id")
-    res.send(req.params.id)
+    res.send({success: true, payload: getById})
 })
 
 //Create new film

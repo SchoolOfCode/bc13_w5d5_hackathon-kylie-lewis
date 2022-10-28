@@ -1,3 +1,65 @@
-h1 {
-  color: firebrick;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {  
+  background: linear-gradient(to right, rgb(220, 210, 243), rgba(234, 234, 234, 0.2));
+  display: flex;
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.1rem;
 }
+
+.container {
+  height: 90vh;
+  width: 50vw;
+  min-width: 400px;
+  min-height: 600px;
+  background-color: rgb(226, 226, 226);
+  border: 4px solid steelblue;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-item {
+ border: 3px solid steelblue;
+ text-align: center;
+}
+
+.member-form {
+ display: flex;
+ height: 20%;
+ width: 75%;
+ padding: 15px;
+ flex-direction: column;
+}
+
+.film-form {
+  display: flex;
+  height: 20%;
+  width: 75%;
+  padding: 15px;
+  flex-direction: column;
+ }
+
+ .buttons {
+  display: flex;
+  height: 10%;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 8%;
+ }
+   
+ button {
+  /* margin: 5px; */
+  width: 25%;
+  /* width: 120px; */
+  font-size: 1.05rem;
+  line-height: 40px;
+}
+
+
+
+
+
