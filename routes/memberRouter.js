@@ -3,7 +3,7 @@ const {query} = require("../db/index.js")
 const express = require("express");
 const router = express.Router();
 
-//const {} MODELS
+const {getAllMembers} = require("../models/members.js")
 
 router.get('/', async function (req,res){
     if(req.query.first_name){
@@ -11,8 +11,8 @@ router.get('/', async function (req,res){
         res.send(req.query.first_name)
     }
     else{
-        console.log("getall")
-        res.send("Get all")
+        const result = await getAllMembers()
+        res.send(result)
     }
    
 })
