@@ -10,4 +10,9 @@ router.get('/', async function (req,res){
     res.send("Get all")
 })
 
+router.get('/:id', async function (req, res) {
+    console.log(req.params.id)
+    res.send(req.params.id)
+})
+
 module.exports = router;
